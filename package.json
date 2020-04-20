@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/milkywaynian/reading-app-backend#readme",
   "dependencies": {
+    "google-books-search": "^0.3.1",
     "node-fetch": "^2.6.0"
   }
 }
