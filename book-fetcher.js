@@ -1,15 +1,31 @@
 const fetch = require ('node-fetch');
-const dotenv = require('dotenv').config(); 
+require('dotenv').config(); 
 console.log("Script run");
+const books = require('google-books-search');
 // request a book title and get a jSon response from google books API 
 
-fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
+// fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes')
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   });
+
+const options = {
+    key: process.env.KEY
+};
+
+
+
+books.search('Professional JavaScript for Web Developers', options, function(error, results) {
+    if ( ! error ) {
+        console.log(results);
+    } else {
+        console.log(error);
+    }
+});
+
 
 
 //   fetch('placeholder_API_key')
