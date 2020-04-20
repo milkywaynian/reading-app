@@ -1,14 +1,15 @@
 const fetch = require ('node-fetch');
+const dotenv = require('dotenv').config(); 
 console.log("Script run");
 // request a book title and get a jSon response from google books API 
 
-// fetch('http://example.com/movies.json')
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   });
+fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  });
 
 
 //   fetch('placeholder_API_key')
