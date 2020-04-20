@@ -1,0 +1,19 @@
+{
+  "name": "reading-app-backend",
+  "version": "1.0.0",
+  "description": "The purpose of the app is to allow a person to search for books and build their own personal reading list. The app should allow for the following:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milkywaynian/reading-app-backend.git"
+  },
+  "author": "Marina Faraji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milkywaynian/reading-app-backend/issues"
+  },
+  "homepage": "https://github.com/milkywaynian/reading-app-backend#readme"
+}
