@@ -18,6 +18,7 @@
   "homepage": "https://github.com/milkywaynian/reading-app-backend#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "google-books-search": "^0.3.1",
     "node-fetch": "^2.6.0"
   }
