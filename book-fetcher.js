@@ -12,6 +12,9 @@ fetch('https://www.googleapis.com/books/v1/volumes?q=search+terms')
     console.log(data);
   });
 
+
+  //endpoint that receives infromation from the user; 
+
 // const options = {
 //     key: process.env.KEY 
 // };
