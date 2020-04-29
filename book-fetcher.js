@@ -4,37 +4,28 @@ console.log("Script run");
 const books = require('google-books-search');
 // request a book title and get a jSon response from google books API 
 
-fetch('https://www.googleapis.com/books/v1/volumes?q=search+terms')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
+fetch('https://www.googleapis.com/books/v1/volumes?q=intitle:"harry potter"')
+    .then((response) => response.json())
+    .then((result) => getTheFirstBook(result))
+    .then(nextResult => console.log(nextResult))
+    .catch(err => console.log(err));
+
+const getTheFirstBook = result => {
+    const firstBook = result.items[1];
+    return firstBook;
+};
 
 
-  //endpoint that receives infromation from the user; 
 
-// const options = {
-//     key: process.env.KEY 
-// };
-
-// const api_key = process.env.API_KEY;
-
-// const options = {
-//     key: api_key
-// };
-
-//How to convert to a promise?
-// books.search('Professional JavaScript for Web Developers', options,  function(error, results) {
-//     if ( ! error ) {
-//         console.log(results);
-//     } else {
-//         console.log(error);
-//     }
-// });
+//   .then((response) => response.json())
+//   .then(({items:[0]})
+//     console.log(items);
 
 
+
+  // we need to write a function which would give us useful book data 
+
+  
 
 //   fetch('placeholder_API_key')
 //     .then(res => res.json())
